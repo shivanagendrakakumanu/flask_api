@@ -4,6 +4,8 @@
   tasks:
   - name: create docker image
     command: docker build -t flaskapi:latest .
+    args:
+       chdir: /var/lib/jenkins/workspace/FlaskAPI
 
   - name: create tag to push image onto dockerhub
     command: docker tag flaskapi:latest shivanagendrak/flaskapi:latest
