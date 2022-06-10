@@ -8,7 +8,7 @@ api = Api(app)
 class GetDetail(Resource):
     def get(self):
         # time.sleep(6)
-        return "Python API"
+        return "Python Flask API"
 
 api.add_resource(GetDetail, '/getname')
 
