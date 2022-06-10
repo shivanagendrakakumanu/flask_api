@@ -1,6 +1,7 @@
-# flask_api
+# Flask API in AWS
 Flask API in AWS
 
+http://3.91.38.115:8001/getname
 
 pip3 install Flask
 
