@@ -1,12 +1,12 @@
 ---
 - hosts: ansiblehostip
 
-tasks:
-- name: create docker image
-  command: docker build -t flaskapi:latest .
+  tasks:
+  - name: create docker image
+    command: docker build -t flaskapi:latest .
 
-- name: create tag to push image onto dockerhub
-  command: docker tag flaskapi:latest valaxy/flaskapi:latest
+  - name: create tag to push image onto dockerhub
+    command: docker tag flaskapi:latest shivanagendrak/flaskapi:latest
 
-- name: push docker image
-  command: docker push valaxy/flaskapi:latest   
+  - name: push docker image
+    command: docker push shivanagendrak/flaskapi:latest  
