@@ -1,3 +1,4 @@
-pip3 install Flask
-pip3 install flask-restful
-pip3 install pytest
+Flask==2.1.2
+Flask-RESTful==0.3.9
+requests==2.27.1
+pytest==7.1.2
