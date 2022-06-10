@@ -1,18 +1,18 @@
 ---
 - hosts: dockerhostip
 
-tasks:
-- name: stop if we have old docker container
-  command: docker stop flaskapi-server
-  ignore_errors: yes
+  tasks:
+  - name: stop if we have old docker container
+    command: docker stop flaskapi-server
+    ignore_errors: yes
 
-- name: remove stopped docker container
-  command: docker rm flaskapi-server
-  ignore_errors: yes
+  - name: remove stopped docker container
+    command: docker rm flaskapi-server
+    ignore_errors: yes
 
-- name: remove image
-  command: docker rmi valaxy/flaskapi:latest
-  ignore_errors: yes
+  - name: remove image
+    command: docker rmi shivanagendrak/flaskapi:latest
+    ignore_errors: yes
 
-- name: create container
-  command: docker run -d --name flaskapi-server -p 5000:5000 valaxy/flaskapi:latest
+  - name: create container
+    command: docker run -d --name flaskapi-server -p 5000:5000 shivanagendrak/flaskapi:latest
